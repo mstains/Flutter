@@ -111,6 +111,7 @@ class ReViewButtonWidget extends StatelessWidget {
                 child: Text("自定义button背景，圆角，点击文字颜色等属性"),
                 textColor: Colors.white,
                 color: Colors.black,
+                //按下的背景颜色
                 highlightColor: Colors.red,
                 //禁止按下的背景颜色
                 disabledColor: Colors.orangeAccent,

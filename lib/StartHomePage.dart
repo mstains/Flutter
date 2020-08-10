@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterinit/review/ReViewButtonWidget.dart';
 import 'package:flutterinit/review/ReviewHomePage.dart';
+import 'package:flutterinit/widget/InheritedWidgetTestRoute.dart';
+import 'package:flutterinit/widget/WillPopScopeTestRoute.dart';
 import 'package:flutterinit/widget/layout/LayoutHomePage.dart';
+import 'package:flutterinit/widget/scrollable/ScrollableRoute.dart';
 
 
 void main() {
@@ -43,7 +46,6 @@ class StartHomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 8,top: 18),
                 child: RaisedButton(
-
                   onPressed: () {
 
                 Navigator.pushNamed(context, "review_route");
@@ -55,7 +57,26 @@ class StartHomePage extends StatelessWidget {
 
                 Navigator.pushNamed(context, "layout_route");
 
-              },child: Text("布局"),)
+              },child: Text("布局"),),
+              RaisedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScrollableRoute()));
+              },child: Text("滚动视图"),),
+
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 10),
+                child: RaisedButton(onPressed: (){
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => WillPopScopeTestRoute()));
+
+                },child: Text("返回键监听"),),
+
+              ),
+
+              RaisedButton(onPressed: (){
+                //InheritedWidgetTestRoute
+                Navigator.push(context, MaterialPageRoute(builder: (context) => InheritedWidgetTestRoute()));
+              },child: Text("数据共享"),)
+
             ],
           ),
         ),

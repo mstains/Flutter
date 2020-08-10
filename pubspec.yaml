@@ -80,3 +80,5 @@ flutter:
   assets:
     - assets/image/jj.jpg
     - assets/config.txt
+    - assets/image/left_back_icon.png
+    - assets/image/user_photo.png
